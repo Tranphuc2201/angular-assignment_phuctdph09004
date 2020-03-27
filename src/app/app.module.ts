@@ -9,7 +9,6 @@ import { HelloComponent } from './hello.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { SliderComponent } from './slider/slider.component';
 import { ProductComponent } from './product/product.component';
-import { CategoryComponent } from './category/category.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { ProductService } from './product.service';
 import { ProductAddComponent } from './product-add/product-add.component';
@@ -22,7 +21,7 @@ import { ProductEditComponent } from './product-edit/product-edit.component';
 // import { ProductManager } from './product-manager/product-manager.component';
 @NgModule({
   imports:      [ BrowserModule,AppRoutingModule,FormsModule , HttpClientModule ],
-  declarations: [ AppComponent, HelloComponent, ProductListComponent, SliderComponent, ProductComponent, CategoryComponent, ProductDetailComponent, ProductAddComponent, AboutComponent, HomeComponent, ServicesComponent, ContactComponent, NotFoundComponent, ProductEditComponent ],
+  declarations: [ AppComponent, HelloComponent, ProductListComponent, SliderComponent, ProductComponent, ProductDetailComponent, ProductAddComponent, AboutComponent, HomeComponent, ServicesComponent, ContactComponent, NotFoundComponent, ProductEditComponent ],
   bootstrap:    [ AppComponent ],
   providers: [ProductService]
 })
