@@ -4,7 +4,6 @@ import { AboutComponent } from "./about/about.component";
 import { ProductAddComponent } from "./product-add/product-add.component";
 import { HomeComponent } from "./home/home.component";
 import { ServicesComponent } from "./services/services.component";
-import { ContactComponent } from "./contact/contact.component";
 import { NotFoundComponent } from './not-found/not-found.component';
 import { ProductListComponent } from "./product-list/product-list.component";
 import { ProductManagerComponent } from "./product-manager/product-manager.component";
@@ -16,7 +15,6 @@ const routes: Routes = [
   { path: "about", component: AboutComponent },
   // { path: "add", component: ProductAddComponent }
   { path: "services", component: ServicesComponent },
-  { path: "contact", component: ContactComponent },
   { path: "product-list", component: ProductListComponent },
   { path: "productDetail", component: ProductDetailComponent },
   //  { path: "product-manager", component: ProductManagerComponent },
