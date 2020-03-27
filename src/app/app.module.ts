@@ -7,21 +7,18 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
 import { ProductListComponent } from './product-list/product-list.component';
-import { SliderComponent } from './slider/slider.component';
 import { ProductComponent } from './product/product.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { ProductService } from './product.service';
 import { ProductAddComponent } from './product-add/product-add.component';
 import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
-import { ServicesComponent } from './services/services.component';
-import { ContactComponent } from './contact/contact.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { ProductEditComponent } from './product-edit/product-edit.component';
 // import { ProductManager } from './product-manager/product-manager.component';
 @NgModule({
   imports:      [ BrowserModule,AppRoutingModule,FormsModule , HttpClientModule ],
-  declarations: [ AppComponent, HelloComponent, ProductListComponent, SliderComponent, ProductComponent, ProductDetailComponent, ProductAddComponent, AboutComponent, HomeComponent, ServicesComponent, ContactComponent, NotFoundComponent, ProductEditComponent ],
+  declarations: [ AppComponent, HelloComponent, ProductListComponent, ProductComponent, ProductDetailComponent, ProductAddComponent, AboutComponent, HomeComponent, NotFoundComponent, ProductEditComponent ],
   bootstrap:    [ AppComponent ],
   providers: [ProductService]
 })
