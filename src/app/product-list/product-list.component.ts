@@ -13,19 +13,22 @@ export class ProductListComponent implements OnInit {
   products: Product[];
   // product: Product = new Product();
 
-  constructor(
-    private productService: ProductService, private router: Router) {}
+  constructor(private productService: ProductService, private router: Router) {}
 
   ngOnInit(): void {
     this.getProducts();
-   
   }
   detailProduct(product) {
     this.selected = product;
     // console.log(this.selected);
   }
   removeItem(id) {
-    this.products = this.products.filter(product => product.id !== id);
+    this.productService.removeItem(id).subscribe(Response => {
+      this.products = this.products.filter(
+        product => product.id != Response.id
+      );
+    });
+    // this.products = this.products.filter(product => product.id !== id);
   }
 
   getProducts() {

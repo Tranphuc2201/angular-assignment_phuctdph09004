@@ -23,7 +23,8 @@ export class ProductService {
     let newObj = { ...product };
     // this.products.push(newObj);
   }
-  removeItem(id) {
+  removeItem(id) :Observable<Product> {
+   return this.http.get<Product>('${this.api}/${id}');
     // this.products =  this.products.filter(product => product.id !== id);
   }
   getProduct(id) : Observable<Product> {
