@@ -19,13 +19,11 @@ export class ProductService {
     return this.http.get<Product[]>(this.api);
     // return this.products;
   }
-  addProduct(product) {
-    let newObj = { ...product };
-    // this.products.push(newObj);
+  addProduct(product): Observable<Product> {
+    return this.http.post<Product>(`${this.api}`, product);
   }
-  removeItem(id) :Observable<Product> {
-   return this.http.get<Product>('${this.api}/${id}');
-    // this.products =  this.products.filter(product => product.id !== id);
+  removeProduct(id): Observable<Product> {
+    return this.http.delete<Product>(`${this.api}/${id}`);
   }
   getProduct(id) : Observable<Product> {
     return this.http.get<Product>('${this.api}/${id}');

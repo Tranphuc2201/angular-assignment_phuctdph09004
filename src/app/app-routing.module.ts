@@ -6,6 +6,7 @@ import { HomeComponent } from "./home/home.component";
 import { NotFoundComponent } from './not-found/not-found.component';
 import { ProductListComponent } from "./product-list/product-list.component";
 import { ProductDetailComponent } from "./product-detail/product-detail.component";
+import { ProductEditComponent } from "./product-edit/product-edit.component";
 
 const routes: Routes = [
    { path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -15,9 +16,10 @@ const routes: Routes = [
   { path: "product-list", component: ProductListComponent },
   { path: "productDetail", component: ProductDetailComponent },
   { path: "product-add", component: ProductAddComponent },
-  { path: "**", component: AboutComponent },
-  { path: '404', component: NotFoundComponent},
-    { path: '**', redirectTo: '/404'}
+  // { path: "**", component: AboutComponent },
+  // { path: '404', component: NotFoundComponent},
+  //   { path: '**', redirectTo: '/404'},
+    {path: 'edit/:ProductId', component: ProductEditComponent}
 
 
 ];

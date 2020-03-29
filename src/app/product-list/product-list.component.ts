@@ -22,13 +22,14 @@ export class ProductListComponent implements OnInit {
     this.selected = product;
     // console.log(this.selected);
   }
-  removeItem(id) {
-    this.productService.removeItem(id).subscribe(Response => {
+  removeTteam(id) {
+    this.productService.removeProduct(id).subscribe(response => {
+      console.log(response);
       this.products = this.products.filter(
-        product => product.id != Response.id
+        product => product.id != response.id
       );
     });
-    // this.products = this.products.filter(product => product.id !== id);
+    alert("Bạn đã xóa thành công!");
   }
 
   getProducts() {
@@ -38,7 +39,7 @@ export class ProductListComponent implements OnInit {
     // this.products = this.productService.getProducts();
     // console.log(this.getProducts);
   }
-  editItem(id) {
-    this.router.navigate(["/product-edit", id]);
+  editItem() {
+    this.router.navigate(["/product-edit"]);
   }
 }
