@@ -15,8 +15,8 @@ import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { ProductEditComponent } from './product-edit/product-edit.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { IndexAdminComponent } from './index-admin/index-admin.component';
+import { DashboardComponent } from './admin/dashboard/dashboard.component';
+import { IndexAdminComponent } from './admin/index-admin/index-admin.component';
 // import { ProductManager } from './product-manager/product-manager.component';
 @NgModule({
   imports:      [ BrowserModule,AppRoutingModule,FormsModule , HttpClientModule ],
