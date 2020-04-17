@@ -7,10 +7,9 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { ProductListComponent } from "./product-list/product-list.component";
 import { ProductDetailComponent } from "./product-detail/product-detail.component";
 import { ProductEditComponent } from "./product-edit/product-edit.component";
-import { IndexAdminComponent} from "./admin/index-admin/index-admin.component"
-import { DashboardComponent} from "./admin/dashboard/dashboard.component"
-import { ManagerProductComponent} from './admin/product-admin/product-admin.component
-
+import { DashboardComponent } from './admin/dashboard/dashboard.component';
+import { ManagerProductComponent } from "./admin/product-admin/product-admin.component";
+import { IndexAdminComponent } from './admin/index-admin/index-admin.component';
 const routes: Routes = [
    { path: '', redirectTo: 'home', pathMatch: 'full'},
   { path: "home", component: HomeComponent },
