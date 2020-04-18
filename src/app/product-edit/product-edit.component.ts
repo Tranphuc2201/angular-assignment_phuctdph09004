@@ -1,32 +1,42 @@
 import { Component, OnInit, Input } from "@angular/core";
-import { Product } from "../product";
+import { Product } from "../Product";
 import{ProductService} from "../product.service"
 // import { ProductService } from "../service/product.service";
-import { Router, ActivatedRoute } from "@angular/router";
+import { Router, ActivatedRoute, Route } from "@angular/router";
 import { from } from 'rxjs';
+import { data } from '../MockData';
 @Component({
   selector: "app-product-edit",
   templateUrl: "./product-edit.component.html",
   styleUrls: ["./product-edit.component.css"]
 })
 export class ProductEditComponent implements OnInit {
-  product: Product = new Product();
+  product: Product ;
   id: number;
   constructor(
     private productService: ProductService,
     private route: ActivatedRoute,
-    private router: Router
+    private router: Router,
   ) {}
   sub: any;
 
   ngOnInit() {
-    this.sub = this.route.paramMap.subscribe(params => {
-      this.id = Number(params.get("id"));
-      this.product = this.productService.getProduct(id);
-    });
+   this.getProduct();
   }
-  updateProduct() {
-    this.productService.editProduct(this.product);
-    this.router.navigate(["/product-list"]);
+  getProduct() {
+    this.route.params.subscribe(param =>{
+      this.productService.getProductdetail(param.productID).subscribe(data =>{
+          this.product = data;
+      // this.productService.getProducts(param.productID).subscribe(data =>{
+      //   this.product = data;
+    })
+  })
+  }
+  updateProduct(){
+this.productService.updateProduct(this.product).subscribe(data =>{
+this.router.navigateByUrl('/admin/dashboard');
+
+})
+
   }
 }
