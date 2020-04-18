@@ -10,6 +10,7 @@ import { ProductEditComponent } from "./product-edit/product-edit.component";
 import { DashboardComponent } from './admin/dashboard/dashboard.component';
 import { ProductAdminComponent } from "./admin/product-admin/product-admin.component";
 import { IndexAdminComponent } from './admin/index-admin/index-admin.component';
+import { ProductManagerComponent } from "./product-manager/product-manager.component";
 const routes: Routes = [
    { path: '', redirectTo: 'home', pathMatch: 'full'},
   { path: "home", component: HomeComponent },
@@ -17,6 +18,7 @@ const routes: Routes = [
   { path: "add", component: ProductAddComponent },
   { path: "product-list", component: ProductListComponent },
   { path: "productDetail", component: ProductDetailComponent },
+  { path: "product-manager", component: ProductManagerComponent },
   // { path: "product-add", component: ProductAddComponent },
   
    { path: 'admin', component: IndexAdminComponent, 

@@ -18,10 +18,11 @@ import { ProductEditComponent } from './product-edit/product-edit.component';
 import { DashboardComponent } from './admin/dashboard/dashboard.component';
 import { IndexAdminComponent } from './admin/index-admin/index-admin.component';
 import {ProductAdminComponent } from './admin/product-admin/product-admin.component';
+import { ProductManagerComponent } from './product-manager/product-manager.component';
 // import { ProductManager } from './product-manager/product-manager.component';
 @NgModule({
   imports:      [ BrowserModule,AppRoutingModule,FormsModule , HttpClientModule ],
-  declarations: [ AppComponent, HelloComponent, ProductListComponent, ProductComponent, ProductDetailComponent, ProductAddComponent, AboutComponent, HomeComponent, NotFoundComponent, ProductEditComponent, DashboardComponent, IndexAdminComponent, ProductAdminComponent ],
+  declarations: [ AppComponent, HelloComponent, ProductListComponent, ProductComponent, ProductDetailComponent, ProductAddComponent, AboutComponent, HomeComponent, NotFoundComponent, ProductEditComponent, DashboardComponent, IndexAdminComponent, ProductAdminComponent, ProductManagerComponent ],
   bootstrap:    [ AppComponent ],
   providers: [ProductService]
 })

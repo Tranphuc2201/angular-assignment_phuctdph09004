@@ -1,0 +1,35 @@
+<header class="d-flex mb-3 pt-5 justify-content-between">
+  <h3>Manager</h3>
+  <button class="btn btn-success " routerLink="/product/add"> Add Product</button>
+
+</header>  
+  <h3>Product Manager</h3>
+
+  <table border="2" style=" width:  95%; border-collapse: separate;">
+   
+    <tr  class="bg-warning">
+      <th>ID</th>
+      <th>Name</th>
+      <th>Price</th>
+      <th>Desc</th>  
+      <!-- <th>IMG</th>   -->
+      <th>Chi Tiet</th>  
+      <th>Sua</th>  
+      <th>Delete</th>  
+    </tr>
+
+    <tr *ngFor="let product of products" >
+        <td class="table-danger"> {{product.id}} </td>
+        <td class="table-info">{{product.name}} </td>
+        <td class="bg-danger">{{product.price}} </td>
+        <td class="table-secondary">{{product.desc}} </td>
+        
+        <td> <button class="btn btn-info d-block w-100 btn-lg" routerLink="/product-list/{{product.id}}">Chi Tiet</button></td>
+          
+         <td> <button class="btn btn-primary d-block w-100 btn-lg" routerLink="/product-list/edit/{{product.id}}">Sua</button> </td>
+         <td> <button class="btn btn-danger d-block w-100 btn-lg"  (click)="removeItem(product.id)">Delete</button> </td>
+        
+        
+    </tr>
+
+</table>
