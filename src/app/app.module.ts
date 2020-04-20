@@ -21,12 +21,10 @@ import {ProductAdminComponent } from './admin/product-admin/product-admin.compon
 import { ProductManagerComponent } from './product-manager/product-manager.component';
 import { MenuComponent } from './menu/menu.component';
 import { FooterComponent } from './footer/footer.component';
-import { DangkiComponent } from './dangki/dangki.component';
-import { LoginComponent } from './login/login.component';
 // import { ProductManager } from './product-manager/product-manager.component';
 @NgModule({
   imports:      [ BrowserModule,AppRoutingModule,FormsModule , HttpClientModule ],
-  declarations: [ AppComponent, HelloComponent, ProductListComponent, ProductComponent, ProductDetailComponent, ProductAddComponent, AboutComponent, HomeComponent, NotFoundComponent, ProductEditComponent, DashboardComponent, IndexAdminComponent, ProductAdminComponent, ProductManagerComponent, MenuComponent, FooterComponent, DangkiComponent, LoginComponent ],
+  declarations: [ AppComponent, HelloComponent, ProductListComponent, ProductComponent, ProductDetailComponent, ProductAddComponent, AboutComponent, HomeComponent, NotFoundComponent, ProductEditComponent, DashboardComponent, IndexAdminComponent, ProductAdminComponent, ProductManagerComponent, MenuComponent, FooterComponent, ],
   bootstrap:    [ AppComponent ],
   providers: [ProductService]
 })
