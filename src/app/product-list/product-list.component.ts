@@ -34,13 +34,16 @@ export class ProductListComponent implements OnInit {
     alert("Bạn đã xóa thành công!");
   }
 
-    getProducts() {
-    this.productService.getProducts().subscribe(data => {
-      //  console.log(data);
-      this.products = data
+    getProducts(){
+
+    this.productService.getProducts().subscribe(data =>{
+      this.products =data
+      console.log(this.products)
     });
   }
-  editItem() {
-    this.router.navigate(["/product-edit"]);
+  editItem(id) {
+    this.router.navigate(["/admin/dashboard", id]);
+
+
   }
 }

@@ -33,7 +33,7 @@ const routes: Routes = [
   // { path: "**", component: AboutComponent },
   // { path: '404', component: NotFoundComponent},
   //   { path: '**', redirectTo: '/404'},
-    {path: 'edit/ProductId', component: ProductEditComponent}
+    {path: 'product-list/edit/:productID', component: ProductEditComponent}
 
 
 ];

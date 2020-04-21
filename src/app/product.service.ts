@@ -15,20 +15,30 @@ export class ProductService {
   ) {}
   
   // product: Product = new Product();
-  getProducts(): Observable<Product[]> {
-    return this.http.get<Product[]>(this.api);
-    // return this.products;
-  }
-  addProduct(product): Observable<Product> {
-    return this.http.post<Product>(`${this.api}`, product);
-  }
-  removeProduct(id): Observable<Product> {
-    return this.http.delete<Product>(`${this.api}/${id}`);
-  }
-  getProduct(id) : Observable<Product> {
-    return this.http.get<Product>('${this.api}/${id}');
-  }
-  updateProduct(product): Observable<Product> {
-    return this.http.put<Product>(`${this.api}/${product.id}`, product);
-  }
+
+
+  
+  getProducts(): Observable<Product[]>{
+  return this.http.get<Product[]>(this.api);
+   //return this.products;
+ }
+ addProduct(product): Observable<Product>{
+   return this.http.post<Product>(`${this.api}`, product);
+  
+}
+removeProduct(id):Observable<Product>{
+  return this.http.delete<Product>(`${this.api}/${id}`); 
+  // this.products =  this.products.filter(product => product.id !== id);
+}
+
+getProductdetail(id):Observable<Product>{
+  // console.log(id);
+  return this.http.get<Product>(`${this.api}/${id}`);   
+   //return this.products;
+ }
+updateProduct(product): Observable<Product>{
+  return this.http.put<Product>(`${this.api}/${product.id}`,product); 
+ 
+
+}
 }

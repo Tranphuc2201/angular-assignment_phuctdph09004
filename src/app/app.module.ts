@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+// import { NgbModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
@@ -24,7 +26,7 @@ import { FooterComponent } from './footer/footer.component';
 import { LoginComponent } from './login/login.component';
 // import { ProductManager } from './product-manager/product-manager.component';
 @NgModule({
-  imports:      [ BrowserModule,AppRoutingModule,FormsModule , HttpClientModule ],
+  imports:      [ BrowserModule,AppRoutingModule,FormsModule , HttpClientModule, NgbModule, ],
   declarations: [ AppComponent, HelloComponent, ProductListComponent, ProductComponent, ProductDetailComponent, ProductAddComponent, AboutComponent, HomeComponent, NotFoundComponent, ProductEditComponent, DashboardComponent, IndexAdminComponent, ProductAdminComponent, ProductManagerComponent, MenuComponent, FooterComponent, LoginComponent, ],
   bootstrap:    [ AppComponent ],
   providers: [ProductService]
