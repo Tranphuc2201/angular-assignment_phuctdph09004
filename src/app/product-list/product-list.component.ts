@@ -18,7 +18,7 @@ export class ProductListComponent implements OnInit {
      private router: Router) {}
 
   ngOnInit(): void {
-    this.getProduct();
+    this.getProducts();
   }
   detailProduct(product) {
     this.selected = product;
@@ -34,9 +34,10 @@ export class ProductListComponent implements OnInit {
     alert("Bạn đã xóa thành công!");
   }
 
-  getProduct() {
-    this.router.params.subscribe(param => {this.productService.getProduct(param.productID)
-        .subscribe(data => (this.products = data));
+    getProducts() {
+    this.productService.getProducts().subscribe(data => {
+      //  console.log(data);
+      this.products = data
     });
   }
   editItem() {

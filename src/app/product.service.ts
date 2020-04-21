@@ -28,12 +28,7 @@ export class ProductService {
   getProduct(id) : Observable<Product> {
     return this.http.get<Product>('${this.api}/${id}');
   }
-  editProduct(product) {
-    // const index = this.products.findIndex(e => e.id === product.id);
-    // if (index === -1) {
-    //   this.products.push(product);
-    // } else {
-    //   this.products[index] = product;
-    // }
+  updateProduct(product): Observable<Product> {
+    return this.http.put<Product>(`${this.api}/${product.id}`, product);
   }
 }
