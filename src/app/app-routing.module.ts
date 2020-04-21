@@ -16,8 +16,8 @@ const routes: Routes = [
    { path: '', redirectTo: 'home', pathMatch: 'full'},
   { path: "home", component: HomeComponent },
   { path: "about", component: AboutComponent },
-  { path: "add", component: ProductAddComponent },
-  { path: "product-list", component: ProductListComponent },
+  { path: "product/add", component: ProductAddComponent },
+  { path: "product/list", component: ProductListComponent },
   { path: "productDetail", component: ProductDetailComponent },
   { path: "product-manager", component: ProductManagerComponent },
   { path: "login", component: LoginComponent },
@@ -33,7 +33,7 @@ const routes: Routes = [
   // { path: "**", component: AboutComponent },
   // { path: '404', component: NotFoundComponent},
   //   { path: '**', redirectTo: '/404'},
-    {path: 'edit/:ProductId', component: ProductEditComponent}
+    {path: 'edit/ProductId', component: ProductEditComponent}
 
 
 ];

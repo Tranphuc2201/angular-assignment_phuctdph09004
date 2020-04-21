@@ -13,10 +13,12 @@ export class ProductListComponent implements OnInit {
   products: Product[];
   // product: Product = new Product();
 
-  constructor(private productService: ProductService, private router: Router) {}
+  constructor(
+    private productService: ProductService,
+     private router: Router) {}
 
   ngOnInit(): void {
-    this.getProducts();
+    this.getProduct();
   }
   detailProduct(product) {
     this.selected = product;
@@ -32,12 +34,10 @@ export class ProductListComponent implements OnInit {
     alert("Bạn đã xóa thành công!");
   }
 
-  getProducts() {
-    this.productService.getProducts().subscribe(data => {
-      this.products = data;
+  getProduct() {
+    this.router.params.subscribe(param => {this.productService.getProduct(param.productID)
+        .subscribe(data => (this.products = data));
     });
-    // this.products = this.productService.getProducts();
-    // console.log(this.getProducts);
   }
   editItem() {
     this.router.navigate(["/product-edit"]);
