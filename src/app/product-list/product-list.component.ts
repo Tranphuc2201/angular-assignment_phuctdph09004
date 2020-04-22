@@ -16,7 +16,8 @@ export class ProductListComponent implements OnInit {
   constructor(
     private productService: ProductService,
      private router: Router) {}
-
+page= 1;
+  pageSize = 15;
   ngOnInit(): void {
     this.getProducts();
   }

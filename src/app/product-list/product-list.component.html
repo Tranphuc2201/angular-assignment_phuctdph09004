@@ -31,3 +31,6 @@
 </div>
 <p *ngIf="selected">{{selected.desc}}</p>
 {{products.values|json}}
+<div  style="padding-left:550px;">
+      <ngb-pagination [(page)]="page" [pageSize]="pageSize" [collectionSize]="products.length"  ></ngb-pagination>
+      </div>
