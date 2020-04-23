@@ -13,7 +13,7 @@ export class ProductListComponent implements OnInit {
   products: Product[];
   // product: Product = new Product();
  page: 1;
-  pageSize: 5;
+  pageSize: ;
   constructor(
     private productService: ProductService,
      private router: Router) {}
