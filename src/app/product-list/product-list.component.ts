@@ -16,8 +16,7 @@ export class ProductListComponent implements OnInit {
   constructor(
     private productService: ProductService,
      private router: Router) {}
-page= 1;
-  pageSize = 15;
+
   ngOnInit(): void {
     this.getProducts();
   }
@@ -40,6 +39,7 @@ page= 1;
     this.productService.getProducts().subscribe(data =>{
       this.products =data
       console.log(this.products)
+      
     });
   }
   editItem(id) {
