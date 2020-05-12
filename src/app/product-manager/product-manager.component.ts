@@ -26,6 +26,7 @@ export class ProductManagerComponent implements OnInit {
       this.products =data
       console.log(this.products)
     });
+    alert("Bạn đã xóa thành công")
   }
   
 }
