@@ -21,6 +21,6 @@ export class ProductAddComponent implements OnInit {
       console.log(data);
        this.route.navigateByUrl('/product/list')
        });
-        // alert("Bạn đã thêm thành công!");
+        alert("Bạn đã thêm thành công!");
   }
 }

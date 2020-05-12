@@ -37,6 +37,6 @@ this.productService.updateProduct(this.product).subscribe(data =>{
 this.router.navigateByUrl('/product/list');
 
 })
-
+alert("Update thành công!")
   }
 }
